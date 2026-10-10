@@ -26,6 +26,8 @@ Legal texts live in `legal.json` and describe the GitHub Pages hosting (no cooki
 
 ## Verification
 
+The exhibition flyer `Flyer_Q4_2026_Ettlingen.jpeg` appears in a responsive dialog after five seconds of visible page time, once per browser-tab session. Hidden-tab time is paused; an open artwork viewer delays the popup until it closes. The dialog closes with its button, Escape, or a backdrop click and restores focus. A compressed local WebP preview is loaded only when the popup opens; the original JPEG is linked for full-size viewing.
+
 Build and local-link/asset checks pass. Desktop and mobile layouts and interactive flows are checked in Chromium using a file-based QA mirror. This environment prevents binding a local HTTP server, so the Bun HTTP preview could not be exercised here.
 
 Design preserves the existing black background, Cinzel headings, logo, German copy and navigation. The refresh adds consistent spacing, responsive local WebP images, focus states and restrained interaction feedback. Paintings retain their original proportions and colors, including on hover. Layout variance: 5/10; motion: 3/10; density: 3/10.

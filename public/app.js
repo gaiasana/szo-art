@@ -70,6 +70,53 @@ dialog.addEventListener('keydown', event => {
   if (event.key === 'ArrowRight') { event.preventDefault(); showWork(current + 1); }
 });
 
+const flyerPopup = document.querySelector('.flyer-popup');
+if (flyerPopup && typeof flyerPopup.showModal === 'function') {
+  const storageKey = 'szo-art:flyer-q4-2026-ettlingen:shown';
+  let shown = false;
+  try { shown = sessionStorage.getItem(storageKey) === 'true'; } catch { /* Storage can be disabled. */ }
+  let remaining = 5000;
+  let startedAt;
+  let timer;
+  let flyerOpener;
+  const showFlyer = () => {
+    if (shown || document.hidden || document.querySelector('dialog[open]')) return;
+    flyerOpener = document.activeElement;
+    const image = flyerPopup.querySelector('img');
+    image.src = image.dataset.src;
+    closeMenu();
+    flyerPopup.showModal();
+    document.body.classList.add('flyer-open');
+    shown = true;
+    try { sessionStorage.setItem(storageKey, 'true'); } catch { /* Still show once on this page. */ }
+  };
+  const scheduleFlyer = () => {
+    clearTimeout(timer);
+    if (shown || document.hidden) return;
+    startedAt = performance.now();
+    timer = setTimeout(() => { remaining = 0; showFlyer(); }, remaining);
+  };
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      clearTimeout(timer);
+      if (startedAt !== undefined) remaining = Math.max(0, remaining - (performance.now() - startedAt));
+      startedAt = undefined;
+    } else scheduleFlyer();
+  });
+  // Let an open artwork viewer finish before showing the flyer.
+  dialog.addEventListener('close', () => { if (remaining === 0) showFlyer(); });
+  flyerPopup.querySelector('.flyer-close').addEventListener('click', () => flyerPopup.close());
+  flyerPopup.addEventListener('click', event => {
+    const bounds = flyerPopup.getBoundingClientRect();
+    if (event.target === flyerPopup && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) flyerPopup.close();
+  });
+  flyerPopup.addEventListener('close', () => {
+    document.body.classList.remove('flyer-open');
+    flyerOpener?.focus({ preventScroll: true });
+  });
+  scheduleFlyer();
+}
+
 const form = document.querySelector('#contact-form');
 if (form) {
   const requestedWork = new URLSearchParams(location.search).get('werk');
