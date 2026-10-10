@@ -22,7 +22,7 @@ The generated `dist/` directory can be deployed to any static host supporting di
 
 The contact form opens a prefilled email in the visitor's mail application. It does not send messages or store personal data. A copyable draft is provided if no mail application is configured. Direct form delivery would require a backend.
 
-Legal text is copied from the original site into `legal-original.json`. Its references to Wix and Google Analytics describe the original site; this copy loads neither service. Align those texts with the final hosting and contact setup before publishing.
+Legal texts live in `legal.json` and describe the GitHub Pages hosting (no cookies, no analytics, no third-party content). `legal-original.json` keeps the original Wix-era texts for reference.
 
 ## Verification
 

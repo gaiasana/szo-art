@@ -1,6 +1,6 @@
 import { cp, mkdir, rm } from 'node:fs/promises';
 import works from './works.json';
-import legal from './legal-original.json';
+import legal from './legal.json';
 
 const escape = (value: string) => value.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]!));
 const logo = (await Bun.file(new URL('./public/assets/szo-art.svg', import.meta.url)).text())
@@ -27,11 +27,9 @@ const footer = `<footer class="site-footer"><a class="footer-name" href="/">Sabi
 const viewer = `<dialog class="viewer" aria-labelledby="viewer-title"><div class="viewer-bar"><a id="viewer-title" href="/selektierte-werke"></a><button class="viewer-close" aria-label="Bildansicht schließen">Schließen <span aria-hidden="true">×</span></button></div><div class="viewer-stage" aria-busy="false"><img id="viewer-image" alt=""><p id="viewer-status" role="status"></p></div><div class="viewer-bottom"><div class="viewer-navigation"><button class="viewer-prev" aria-label="Vorheriges Werk">←</button><span id="viewer-count" aria-live="polite"></span><button class="viewer-next" aria-label="Nächstes Werk">→</button></div><a id="viewer-contact" class="text-link" href="/kontakt">Zu diesem Werk anfragen</a></div></dialog>`;
 
 const legalHeadings = new Set([
-  'Informationen nach § 5 TMG', 'Haftung für Inhalte', 'Haftung für Links', 'Urheberrecht',
-  'Grundlegendes', 'Benennung der verantwortlichen Stelle', 'Widerruf Ihrer Einwilligung zur Datenverarbeitung',
-  'Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde', 'Recht auf Datenübertragbarkeit',
-  'Recht auf Auskunft, Berichtigung, Sperrung, Löschung', 'SSL- bzw. TLS-Verschlüsselung', 'Google Analytics',
-  'Quellen:', '1. Was ist ein Cookie?', '2. Warum verwenden wir Cookies?', '3. Cookie-Übersicht:', '4. Optionen:',
+  'Angaben gemäß § 5 DDG', 'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV', 'Haftung für Inhalte', 'Haftung für Links', 'Urheberrecht',
+  'Grundlegendes', 'Verantwortliche Stelle', 'Hosting durch GitHub Pages', 'Keine Cookies, keine Analyse', 'Kontakt per E-Mail',
+  'SSL- bzw. TLS-Verschlüsselung', 'Ihre Rechte', 'Beschwerderecht bei der Aufsichtsbehörde', 'Diese Website verwendet keine Cookies',
 ]);
 
 const pages = [
