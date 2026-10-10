@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "light",
+    "title": "Light",
+    "width": 1597,
+    "height": 1600,
+    "year": 2021,
+    "dimensions": "100 × 100 cm",
+    "medium": "Acryl auf Leinwand"
+  },
+  {
+    "slug": "power",
+    "title": "Power",
+    "width": 1600,
+    "height": 1600,
+    "year": 2021,
+    "dimensions": "100 × 100 cm",
+    "medium": "Acryl auf Leinwand"
+  },
+  {
+    "slug": "offenheit",
+    "title": "Offenheit",
+    "width": 1600,
+    "height": 1595,
+    "year": 2022,
+    "dimensions": "100 × 100 cm",
+    "medium": "Acryl auf Leinwand"
+  },
+  {
+    "slug": "toscana",
+    "title": "Toscana",
+    "width": 1328,
+    "height": 1600,
+    "year": 2021,
+    "dimensions": "100 × 120 cm",
+    "medium": "Acryl auf Leinwand"
+  },
+  {
+    "slug": "out-of-blue",
+    "title": "Out of Blue",
+    "width": 1308,
+    "height": 1600,
+    "year": 2015,
+    "dimensions": "100 × 120 cm",
+    "medium": "Acryl auf Leinwand"
+  },
+  {
+    "slug": "copper",
+    "title": "Copper",
+    "width": 1582,
+    "height": 1600
+  },
+  {
+    "slug": "turquoise",
+    "title": "Turquoise",
+    "width": 1600,
+    "height": 1345
+  },
+  {
+    "slug": "violet",
+    "title": "Violet",
+    "width": 1277,
+    "height": 1600,
+    "year": 2022,
+    "dimensions": "80 × 100 cm",
+    "medium": "Acryl auf Leinwand"
+  },
+  {
+    "slug": "fall",
+    "title": "Fall",
+    "width": 1600,
+    "height": 1596,
+    "year": 2022,
+    "dimensions": "100 × 100 cm",
+    "medium": "Acryl auf Leinwand"
+  },
+  {
+    "slug": "binary",
+    "title": "Binary",
+    "width": 1595,
+    "height": 1600,
+    "year": 2016,
+    "dimensions": "80 × 80 cm",
+    "medium": "Mischtechnik auf Leinwand"
+  },
+  {
+    "slug": "red-leafs",
+    "title": "Red Leafs",
+    "width": 1596,
+    "height": 1600,
+    "year": 2021,
+    "dimensions": "70 × 70 cm",
+    "medium": "Acryl auf Leinwand"
+  },
+  {
+    "slug": "tor",
+    "title": "Tor",
+    "width": 1277,
+    "height": 1600
+  },
+  {
+    "slug": "glacier-links",
+    "title": "Glacier I",
+    "width": 1116,
+    "height": 1600
+  },
+  {
+    "slug": "glacier-rechts",
+    "title": "Glacier II",
+    "width": 1143,
+    "height": 1600
+  },
+  {
+    "slug": "calice",
+    "title": "Calice",
+    "width": 687,
+    "height": 1083,
+    "year": 2012,
+    "dimensions": "100 × 140 cm",
+    "medium": "Acryl auf Leinwand"
+  },
+  {
+    "slug": "redrobe",
+    "title": "Redrobe",
+    "width": 801,
+    "height": 1068,
+    "year": 2015,
+    "dimensions": "100 × 120 cm",
+    "medium": "Mischtechnik auf Leinwand"
+  },
+  {
+    "slug": "parts",
+    "title": "Parts",
+    "width": 1068,
+    "height": 1600,
+    "year": 2016,
+    "dimensions": "65 × 100 cm",
+    "medium": "Mischtechnik auf Leinwand"
+  },
+  {
+    "slug": "im-schlosshof",
+    "title": "Im Schlosshof",
+    "width": 1591,
+    "height": 1600
+  }
+]
