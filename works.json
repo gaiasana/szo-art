@@ -1,5 +1,11 @@
 [
   {
+    "slug": "sky",
+    "title": "Sky",
+    "width": 1600,
+    "height": 1597
+  },
+  {
     "slug": "light",
     "title": "Light",
     "width": 1597,
